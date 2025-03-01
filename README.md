@@ -32,7 +32,7 @@ Built with Node.js, Express.js, MongoDB (Mongoose), and TypeScript.
   After building the application, you will need to seed the database
   - npx ts-node src/utils/seed.ts
   ## 📡 API Endpoints
-https://github.com/MsPickles1014/Challenge-17-NoSQL/assets/routes.png
+https://github.com/MsPickles1014/Challenge-17-NoSQL/assets/Routes.png
   ## 🛠 Technologies Used
 - ⚡Node.js -  Backend runtime
 - 🔧Express.js -  Web framework
