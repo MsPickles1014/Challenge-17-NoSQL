@@ -33,6 +33,9 @@ Built with Node.js, Express.js, MongoDB (Mongoose), and TypeScript.
   - npx ts-node src/utils/seed.ts
   ## 📡 API Endpoints
   https://github.com/MsPickles1014/Challenge-17-NoSQL/assets/Routes.png
+  ## 📽 Video Demo
+🎥 Watch a short demonstration
+  https://github.com/MsPickles1014/Challenge-17-NoSQL/blob/main/assets/Video/RoutesDemo-Short.mp4
   ## 🛠 Technologies Used
 - ⚡Node.js -  Backend runtime
 - 🔧Express.js -  Web framework
