@@ -88,7 +88,7 @@ export const deleteThought = async (req: Request, res: Response) => {
         });
       } else {
         await User.deleteMany({ _id: req.params.thoughtId});
-        res.json({ message: 'Thoughts and Users deleted!' });
+        res.json({ message: 'Thought deleted!' });
       }
       
     } catch (error: any) {
@@ -98,16 +98,13 @@ export const deleteThought = async (req: Request, res: Response) => {
     }
   };
 
-// add a reaction to a thought
-
-export const addReaction = async (req: Request, res: Response) => {
+  export const addReaction = async (req: Request, res: Response) => {
     try {
         const thought = await Thought.findByIdAndUpdate(
             req.params.thoughtId,
-            { $push: { reactions: req.body } }, 
+            { $push: { reactions: req.body } },
             { new: true, runValidators: true }
         );
-
         if (thought) {
             return res.json({ message: "Reaction added successfully", thought });
         } else {
@@ -117,16 +114,14 @@ export const addReaction = async (req: Request, res: Response) => {
         return res.status(500).json({ message: error.message });
     }
 };
-
-// remove reaction from a thought
+// remove a reaction from a thought
 export const removeReaction = async (req: Request, res: Response) => {
     try {
         const thought = await Thought.findByIdAndUpdate(
             req.params.thoughtId,
-            { $pull: { reactions: { reactionId: req.params.reactionId } } }, 
+            { $pull: { reactions: { reactionId: req.params.reactionId } } },
             { new: true }
         );
-
         if (thought) {
             return res.json({ message: "Reaction removed successfully", thought });
         } else {
